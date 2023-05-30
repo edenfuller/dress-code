@@ -1,0 +1,43 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #191929;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+}
+
+.text-area {
+  position: absolute;
+  bottom: 0;
+  padding: 4rem;
+
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.guide polygon {
+  transform-origin: center center;
+}
+
+.guide polygon[data-value="1"] {
+  transform: scale(.2);
+}
+
+.guide polygon[data-value="2"] {
+  transform: scale(.4);
+}
+
+.guide polygon[data-value="3"] {
+  transform: scale(.6);
+}
+
+.guide polygon[data-value="4"] {
+  transform: scale(.8);
+}
