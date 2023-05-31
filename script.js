@@ -86,3 +86,21 @@ const events = [
     edgy: 3,
   }
 ]
+
+function handleSelection(val) {
+  const event = events[val];
+  const points = parameters.map((param, i) => param.positions[event[param.name]]).join(' ');
+  console.log(points);
+
+  d3.select('polygon.selection')
+    .data(points)
+    .attr('points', points)
+    .attr('stroke', event.color)
+    .attr('fill', event.color + '66')
+}
+
+function init() {
+  handleSelection(0);
+}
+
+init();
