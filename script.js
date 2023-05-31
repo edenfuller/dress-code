@@ -87,19 +87,27 @@ const events = [
   }
 ]
 
+let points = [];
+
 function handleSelection(val) {
   const event = events[val];
-  const points = parameters.map((param, i) => param.positions[event[param.name]]).join(' ');
-  console.log(points);
+  points = parameters.map((param) => param.positions[event[param.name] - 1]);
 
   d3.select('polygon.selection')
-    .data(points)
-    .attr('points', points)
+    .attr('points', points.join(' '))
     .attr('stroke', event.color)
     .attr('fill', event.color + '66')
 }
 
 function init() {
+  d3.select('select')
+    .selectAll('option')
+    .data(events)
+    .enter()
+    .append('option')
+    .text((d) => d.name)
+    .attr('value', (_, i) => i);
+
   handleSelection(0);
 }
 
