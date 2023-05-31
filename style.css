@@ -42,7 +42,7 @@ select {
   align-items: center;
 }
 
-.polygon-labels-holder {
+.chart-area__container {
   width: 500px;
   height: 500px;
   display: flex;
