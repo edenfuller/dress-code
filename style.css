@@ -13,19 +13,20 @@ body {
 .text-area {
   position: absolute;
   bottom: 0;
-  padding: 4rem;
+  padding: 4rem 4rem 8rem 4rem;
 }
 
 h1 {
   font-size: 5rem;
   font-weight: 400;
   color: #aaffaa;
-  margin-bottom: 0;
 }
 
 p, select {
   font-size: 3rem;
   display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 select {
@@ -49,6 +50,8 @@ select {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-shrink: 0;
+  transform-origin: center center;
 }
 
 .chart-area__labels {
@@ -58,7 +61,7 @@ select {
 }
 
 polygon.selection {
-  transition: all 1s ease-out;
+  transition: all 1.3s ease-out;
 }
 
 
@@ -71,4 +74,10 @@ polygon.selection {
   border-radius: 8px;
   position: absolute;
   transform-origin: center center;
+}
+
+@media screen and (max-width: 500px) {
+  .chart-area__container { 
+    transform: scale(0.7);
+  }
 }

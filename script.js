@@ -77,8 +77,8 @@ const events = [
     edgy: 1,
   },
   {
-    name: 'fifth year on the job',
-    color: '#ffccaa',
+    name: 'last day on the job',
+    color: '#eebb99',
     fancy: 2,
     camp: 2,
     sporty: 2,
@@ -94,12 +94,16 @@ function handleSelection(val) {
   points = parameters.map((param) => param.positions[event[param.name] - 1]);
 
   d3.select('polygon.selection')
+    .transition()
+    .duration(750)
     .attr('points', points.join(' '))
     .attr('stroke', event.color)
-    .attr('fill', event.color + '66')
+    .attr('fill', event.color + '88')
 
   d3.selectAll('.chart-area__labels div')
     .data(points)
+    .transition()
+    .duration(500)
     .attr('class', 'corner-point')
     .attr('style', (d) => {
       const axes = d.split(',');
