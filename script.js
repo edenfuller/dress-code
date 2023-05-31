@@ -50,15 +50,6 @@ const events = [
     edgy: 4,
   },
   {
-    name: 'a warehouse rave',
-    color: '#aaffaa',
-    fancy: 3,
-    campy: 4,
-    sporty: 2,
-    cozy: 2,
-    edgy: 5,
-  },
-  {
     name: 'yoga & brunch',
     color: '#aaaaff',
     fancy: 3,
@@ -68,23 +59,32 @@ const events = [
     edgy: 1,
   },
   {
+    name: 'a warehouse rave',
+    color: '#77ff77',
+    fancy: 3,
+    campy: 4,
+    sporty: 4,
+    cozy: 1,
+    edgy: 5,
+  },
+  {
+    name: 'a camping trip',
+    color: '#eebb99',
+    fancy: 1,
+    campy: 5,
+    sporty: 5,
+    cozy: 5,
+    edgy: 1,
+  },
+  {
     name: 'first day on the job',
-    color: '#ffccaa',
+    color: '#5e9fed',
     fancy: 4,
     campy: 1,
     sporty: 2,
     cozy: 2,
     edgy: 1,
   },
-  {
-    name: 'last day on the job',
-    color: '#eebb99',
-    fancy: 2,
-    campy: 2,
-    sporty: 2,
-    cozy: 5,
-    edgy: 3,
-  }
 ]
 
 let points = [];
