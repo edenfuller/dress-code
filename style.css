@@ -132,6 +132,14 @@ polygon.selection {
 
 
 @media (max-width: 500px) {
+  :root {
+    font-size: 8px;
+  }
+  
+  .text-area {
+    padding: 2rem;
+  }
+
   .chart-area__container { 
     transform: scale(0.7);
   }
