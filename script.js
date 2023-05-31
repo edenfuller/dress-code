@@ -109,6 +109,12 @@ function handleSelection(val) {
       const axes = d.split(',');
       return `transform: translate(${Number(axes[0]) + 46}px, ${Number(axes[1]) + 46}px);`
     });
+
+  d3.select('h1, select')
+    .attr('style', `color: ${event.color}`);
+
+  d3.select('select')
+    .attr('style', `color: ${event.color}`);
 }
 
 function init() {

@@ -20,6 +20,7 @@ h1 {
   font-size: 5rem;
   font-weight: 400;
   color: #aaffaa;
+  transition: color .75s linear;
 }
 
 p, select {
@@ -34,6 +35,7 @@ select {
   padding: 0 1rem 0 0;
   background: none;
   color: #aaffaa;
+  transition: color .75s linear;
 }
 
 .chart-area {
@@ -129,7 +131,7 @@ polygon.selection {
 }
 
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .chart-area__container { 
     transform: scale(0.7);
   }
