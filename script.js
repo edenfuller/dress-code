@@ -132,6 +132,24 @@ function init() {
       const axes = d.split(',');
       return `transform: translate(${Number(axes[0]) + 46}px, ${Number(axes[1]) + 46}px);`
     });
+
+  d3.select('.chart-area__labels')
+    .selectAll('p')
+    .data(parameters)
+    .enter()
+    .append('p')
+    .attr('class', 'chart-label chart-label--name')
+    .text((d) => d.name)
+    .attr('data-index', (_, i) => i)
+
+  d3.select('.chart-area__labels')
+    .selectAll('p.chart-label--number')
+    .data(parameters)
+    .enter()
+    .append('p')
+    .attr('class', 'chart-label chart-label--number')
+    .text((_, i) => i + 1)
+    .attr('data-index', (_, i) => i)
 }
 
 document.querySelector('select').addEventListener(

@@ -76,6 +76,59 @@ polygon.selection {
   transform-origin: center center;
 }
 
+.chart-label {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transform-origin: center center;
+  position: absolute;
+}
+
+.chart-label--number {
+  font-size: 1.1rem;
+}
+
+.chart-label--number[data-index="0"] {
+  transform: translate(250px, 305px);
+}
+
+.chart-label--number[data-index="1"] {
+  transform: translate(250px, 335px);
+}
+
+.chart-label--number[data-index="2"] {
+  transform: translate(250px, 364px);
+}
+
+.chart-label--number[data-index="3"] {
+  transform: translate(250px, 393px);
+}
+
+.chart-label--number[data-index="4"] {
+  transform: translate(250px, 422px);
+}
+
+
+.chart-label--name[data-index="0"] {
+  transform: translate(80px, 30px);
+}
+
+.chart-label--name[data-index="1"] {
+  transform: translate(390px, 30px);
+}
+
+.chart-label--name[data-index="2"] {
+  transform: translate(450px, 310px);
+}
+
+.chart-label--name[data-index="3"] {
+  transform: translate(237px, 450px);
+}
+
+.chart-label--name[data-index="4"] {
+  transform: translate(10px, 310px);
+}
+
+
 @media screen and (max-width: 500px) {
   .chart-area__container { 
     transform: scale(0.7);
