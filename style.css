@@ -14,30 +14,38 @@ body {
   position: absolute;
   bottom: 0;
   padding: 4rem;
-
 }
 
 h1 {
   font-size: 5rem;
   font-weight: 400;
+  color: #aaffaa;
+  margin-bottom: 0;
 }
 
-.guide polygon {
-  transform-origin: center center;
+p, select {
+  font-size: 3rem;
+  display: inline-block;
 }
 
-.guide polygon[data-value="1"] {
-  transform: scale(.2);
+select {
+  border: none;
+  padding: 0 1rem 0 0;
+  background: none;
+  color: #aaffaa;
 }
 
-.guide polygon[data-value="2"] {
-  transform: scale(.4);
+.chart-area {
+  padding: 4rem;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.guide polygon[data-value="3"] {
-  transform: scale(.6);
-}
-
-.guide polygon[data-value="4"] {
-  transform: scale(.8);
+.polygon-labels-holder {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
