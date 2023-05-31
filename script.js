@@ -97,6 +97,14 @@ function handleSelection(val) {
     .attr('points', points.join(' '))
     .attr('stroke', event.color)
     .attr('fill', event.color + '66')
+
+  d3.selectAll('.chart-area__labels div')
+    .data(points)
+    .attr('class', 'corner-point')
+    .attr('style', (d) => {
+      const axes = d.split(',');
+      return `transform: translate(${Number(axes[0]) + 46}px, ${Number(axes[1]) + 46}px);`
+    });
 }
 
 function init() {
@@ -121,5 +129,9 @@ function init() {
       return `transform: translate(${Number(axes[0]) + 46}px, ${Number(axes[1]) + 46}px);`
     });
 }
+
+document.querySelector('select').addEventListener(
+  'change', e => handleSelection(e.target.value)
+);
 
 init();
