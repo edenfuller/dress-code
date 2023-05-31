@@ -9,7 +9,7 @@ const parameters = [
   },
   {
     name: 'sporty',
-    positions: ['287,214', '316,221', '345,228', '374,235', '403,242'],
+    positions: ['287,214', '316,221', '345,228', '374,235', '400,242'],
   },
   {
     name: 'cozy',
@@ -109,6 +109,17 @@ function init() {
     .attr('value', (_, i) => i);
 
   handleSelection(0);
+
+  d3.select('.chart-area__labels')
+    .selectAll('div')
+    .data(points)
+    .enter()
+    .append('div')
+    .attr('class', 'corner-point')
+    .attr('style', (d) => {
+      const axes = d.split(',');
+      return `transform: translate(${Number(axes[0]) + 46}px, ${Number(axes[1]) + 46}px);`
+    });
 }
 
 init();
